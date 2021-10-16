@@ -46,6 +46,18 @@ h4 {
    position: relative;
 }
 
+#wrapper2{
+  justify-content:flex-start;
+}
+
+#projectTitle {
+  margin-top: 10vh;
+	color: white;
+	font-size: 2em;
+	letter-spacing: .5em;
+	animation: glitch-skew 2s infinite linear alternate-reverse;
+}
+
 #title {
 	color: white;
 	font-size: 2em;
@@ -62,7 +74,7 @@ h4 {
 	color: white;
 	font-size: 1em;
 	letter-spacing: .1em;
-	animation: glitch-skew 2s infinite linear alternate-reverse;
+	animation: glitch-fade 2s infinite linear alternate-reverse;
 }
 
 #name {
@@ -72,7 +84,7 @@ h4 {
 	animation: glitch-skew 2s infinite linear alternate-reverse;
 }
 
-#name::before, #name::after {
+#name::before, #name::after, #title::before, #title::after {
 	content: attr(data-text);
 	position: absolute;
 	top: 0;
@@ -81,14 +93,14 @@ h4 {
 	height: 100%;
 }
 
-#name::before {
+#name::before, #title::before {
 	left: 2px;
 	text-shadow: -2px 0 #ff00c1;
 	clip: rect(44px, 450px, 56px, 0);
 	animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 
-#name::after {
+#name::after, #title::after {
 	left: -2px;
 	text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
 	animation: glitch-anim2 3s infinite linear alternate-reverse;
@@ -252,6 +264,21 @@ h4 {
   80% {
     transform: none;
     opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch-fade{
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  50% {
+    transform: none;
+    opacity: 0;
   }
   100% {
     transform: none;
