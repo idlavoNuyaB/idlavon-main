@@ -1,5 +1,7 @@
 # idlavon-main
 
+Web portofolio using Vue.js
+
 ## Project setup
 ```
 npm install
