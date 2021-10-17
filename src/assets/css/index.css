@@ -67,7 +67,7 @@ h4 {
 
 #start {
 	position:relative;
-	top: 200px;
+	top: 18vh;
   bottom: auto;
 	left: 0;
 	width: 100%;
@@ -104,6 +104,80 @@ h4 {
 	left: -2px;
 	text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
 	animation: glitch-anim2 3s infinite linear alternate-reverse;
+}
+
+.carousel {
+  margin-top: 7.5vh;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+
+.carousel .card {
+  position: relative;
+  max-width: 30px;
+  height: 215px;
+  background: #ecf0f1;
+  margin: 30px 40px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.carousel .card:hover {
+  height: 430px;
+}
+
+.carousel .card .img {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.carousel .card .img img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.carousel .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  color:black;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.carousel .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -60px;
+  transition-delay: 0.3s;
+}
+
+.carousel .card:hover .content::after {
+  content: "...";
+  position: absolute;
+  right: 6px; 
+  bottom: 28px;
+}
+
+.carousel .card .content .content-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 9em;
+  word-wrap: break-word;
+  color: black;
+  text-align: justify;
 }
 
 @keyframes glitch-anim {
@@ -286,8 +360,86 @@ h4 {
   }
 }
 
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-device-width: 992px) {
   .wrapper {
     background-attachment: scroll;
   }
 }
+
+@media only screen and (max-device-width: 600px) {
+  .wrapper{
+    height: 105%;
+    width: 105%;
+  }
+  #title {
+    font-size: 1em;
+    letter-spacing: .2em;
+  }
+  
+  #start {
+    font-size: 1em;
+    letter-spacing: .1em;
+  }
+  
+  #name {
+    font-size: 2em;
+    letter-spacing: .2em;
+  }
+
+  #projectTitle {
+    font-size: 1em;
+    letter-spacing: .2em;
+  }
+  
+  .carousel .card {
+    max-width: 200px;
+    height: 107px;
+  }
+  
+  .carousel .card:hover {
+    height: 330px;
+  }
+  
+  .carousel .card .img {
+    width: 170px;
+    height: 170px;
+    top: -60px;
+    left: 15px;
+  }
+  
+  .carousel .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -60px;
+    transition-delay: 0.3s;
+  }
+
+  .carousel .card .content h2 {
+    font-size: 1em;
+    letter-spacing: .2em;
+  }
+
+  .carousel .card .content .content-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    max-height: 10.5em;
+    word-wrap: break-word;
+    color: black;
+    text-align: justify;
+    font-size: 1em;
+  }
+  
+}
+
+/* @media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+}  */
