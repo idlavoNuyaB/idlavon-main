@@ -14,7 +14,7 @@ const Main = {
   },
   scrolling() {
     scrollTo('#wrapper','#wrapper2');
-    scrollTo('#wrapper2','#wrapper');
+    // scrollTo('#wrapper2','#wrapper');
   }  
 }
 export default Main
