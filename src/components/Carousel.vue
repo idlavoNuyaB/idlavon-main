@@ -80,6 +80,5 @@ export default {
 
 <style>
 @import '../../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css';
 @import '../../node_modules/@glidejs/glide/dist/css/glide.theme.min.css';
 </style>

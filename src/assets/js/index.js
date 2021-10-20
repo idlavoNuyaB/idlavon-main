@@ -12,9 +12,8 @@ const Main = {
       })
     });
   },
-  scrolling() {
-    scrollTo('#wrapper','#wrapper2');
-    // scrollTo('#wrapper2','#wrapper');
+  scrolling(from,to) {
+    scrollTo(from,to);
   }  
 }
 export default Main

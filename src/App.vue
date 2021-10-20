@@ -17,11 +17,12 @@ export default {
   mounted() {
     this.$nextTick(() => {
       Main.generate()
-      Main.scrolling()
+      Main.scrolling('#wrapper','#wrapper2')
     })
   }}
 </script>
 
 <style>
 @import './assets/css/index.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css';
 </style>
