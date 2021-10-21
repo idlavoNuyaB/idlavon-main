@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper" id="wrapper2">
-    <h1 id="projectTitle" data-text="Project Showcase">Project Showcase</h1>
+    <h1 id="projectTitle"></h1>
     <Carousel/>
     <Contact/>
   </div>

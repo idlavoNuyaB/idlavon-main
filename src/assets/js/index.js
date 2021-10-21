@@ -14,7 +14,50 @@ const Main = {
   },
   scrolling(from,to) {
     scrollTo(from,to);
-  }  
+  },
+  generateSecondPage()  {
+    const app = document.querySelector(".app");
+    const wrapper = document.querySelector("#wrapper2");
+    const text = document.querySelector("#projectTitle");
+    const carousel = document.querySelector(".carousel");
+    const contacts = document.querySelectorAll(".contact");
+    const top = document.querySelector(".top");
+    const options = {
+      root: app,
+      threshold: 0.25
+    };
+    const callback = (entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          setTimeout(function () {            
+            top.classList.add("fadeInBottom");
+          },300)
+          generateProjectTitle().then(
+            setTimeout(function () {
+              generateCarousel(carousel).then(
+                contacts.forEach((contact) => {
+                  setTimeout(function () {
+                    generateContact(contact)
+                  },500)
+                })
+              )
+            },2000)
+          );
+        }
+        else if(entry.boundingClientRect.y > 0){
+          text.innerHTML = "";
+          text.dataset.text = "";
+          carousel.classList.remove("zoomIn");
+          top.classList.remove("fadeInBottom");
+          contacts.forEach((contact) => {
+            contact.classList.remove("fadeInBottom");
+          })
+        }
+      })
+    };
+    const observer = new IntersectionObserver(callback,options);
+    observer.observe(wrapper);
+  }
 }
 export default Main
 
@@ -127,4 +170,27 @@ function typing(text,html,i,resolve) {
       generateText(html,i,textTemp,4,resolve,true);
     }
   }
+}
+
+function generateProjectTitle() {
+  return new Promise((resolve) => {    
+    let html = document.getElementById('projectTitle');
+    html.innerText = '';
+    var textTitle = 'Project Showcase';
+    randomizeTitle(html,textTitle,2,resolve,false);
+  })
+}
+
+function generateCarousel(html) {
+  return new Promise((resolve) => {    
+    html.classList.add("zoomIn");
+    resolve();
+  })
+}
+
+function generateContact(html) {
+  return new Promise((resolve) => {    
+    html.classList.add("fadeInBottom");
+    resolve();
+  })
 }

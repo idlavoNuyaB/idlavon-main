@@ -18,6 +18,7 @@ export default {
     this.$nextTick(() => {
       Main.generate()
       Main.scrolling('#wrapper','#wrapper2')
+      Main.generateSecondPage()
     })
   }}
 </script>

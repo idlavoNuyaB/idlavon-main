@@ -35,19 +35,30 @@ h4 {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background: linear-gradient(rgba(10,10,10,.6),rgba(0,0,0,.9)), repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px),
-     url('https://wallpaperaccess.com/full/670557.jpg');
-   background-size: cover;
-   background-position: center;
-   min-height: 500px;
-   background-attachment: fixed;
-   background-repeat: no-repeat;
    z-index: 1;
    position: relative;
 }
 
+#wrapper{
+  background: linear-gradient(rgba(10,10,10,.6),rgba(0,0,0,.9)), repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px),
+  url('https://wallpaperaccess.com/full/670557.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 #wrapper2{
   justify-content:flex-start;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(10,10,10,.6),rgba(0,0,0,.9)), repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px),
+  url('https://wallpaperaccess.com/full/1690367.jpg');
+
 }
 
 #projectTitle {
@@ -112,6 +123,9 @@ h4 {
   display: flex;
   padding: 30px;
   justify-content: center;
+  transform: scale(0);
+  opacity: 0;
+  transition: .5s ease-in;
 }
 
 .glide__track{
@@ -221,6 +235,9 @@ h4 {
   height: 50px;
   width: 50px;
   margin: 10px;
+  transform: translateY(5vh);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
 }
 
 .link {
@@ -271,13 +288,49 @@ h4 {
   height: 50px;
   width: 50px;
   margin: 10px;
-  opacity: .75;
+  border-color: transparent;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  transform: translateY(10vh);
+  opacity: 0;
+}
+
+.top a {
+  display: inline-flex;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 0.75;
+  color: black;
+  background-color: transparent;
+}
+
+.top a::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(45deg,#ecf0f1,#bdc3c7); 
   border-radius: 50%;
-  z-index: 2;
+  z-index: -1;
   transition: .3s ease-in;
 }
 
-.top:hover {
+.top a:hover {
+  opacity: 1;
+}
+
+.zoomIn {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.fadeInBottom {
+  transform: translateY(0);
   opacity: 1;
 }
 
