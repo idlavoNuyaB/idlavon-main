@@ -121,17 +121,23 @@ h4 {
   margin-top: 7.5vh;
   flex-wrap: wrap;
   display: flex;
-  padding: 30px;
+  padding: 30px 0px;
   justify-content: center;
   transform: scale(0);
   opacity: 0;
   transition: .5s ease-in;
 }
 
+.glide__slides {
+  overflow: visible;
+  display: flex;
+  margin: auto;
+}
+
 .glide__track{
   height: 100%;
   display: flex;
-  padding: 40px;
+  padding: 40px 0px;
 }
 
 .carousel .card {
@@ -139,8 +145,8 @@ h4 {
   max-width: 300px;
   height: 215px;
   background: #ecf0f1;
-  margin: 30px 5vw;
-  padding: 20px 15px;
+  margin: auto;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   box-shadow: 0 5px 202px rgba(0,0,0,0.5);
@@ -162,8 +168,9 @@ h4 {
   position: relative;
   width: 260px;
   height: 260px;
-  top: -100px;
-  left: 7.5px;
+  top: -80px;
+  margin: auto;
+  display: flex;
   z-index: 1;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
@@ -175,7 +182,7 @@ h4 {
 
 .carousel .card .content {
   position: relative;
-  margin-top: -140px;
+  margin-top: -150px;
   padding: 10px 15px;
   color:black;
   visibility: hidden;
@@ -186,7 +193,7 @@ h4 {
 .carousel .glide__slide--active .card:hover .content {
   visibility: visible;
   opacity: 1;
-  margin-top: -100px;
+  margin-top: -95px;
   transition-delay: 0.3s;
 }
 
@@ -217,10 +224,6 @@ h4 {
   opacity: 1;
   filter: none;
   transform: scale(1.1);
-}
-
-.glide__slides {
-  overflow: visible;
 }
 
 .footer {
@@ -333,6 +336,16 @@ h4 {
   transform: translateY(0);
   opacity: 1;
 }
+
+.glide__arrow {
+  opacity: .75;
+  transition: .3s ease-in;
+}
+
+.glide__arrow:hover {
+  opacity: 1;
+}
+
 
 @keyframes glitch-anim {
   0% {
@@ -520,11 +533,7 @@ h4 {
   }
 }
 
-@media only screen and (max-device-width: 600px) {
-  .wrapper{
-    height: 105%;
-    width: 105%;
-  }
+@media only screen and (max-device-width: 400px) {
   #title {
     font-size: 1em;
     letter-spacing: .2em;
@@ -542,58 +551,270 @@ h4 {
 
   #projectTitle {
     font-size: 1em;
-    letter-spacing: .2em;
+    letter-spacing: .1em;
   }
   
   .carousel .card {
-    max-width: 200px;
-    height: 107px;
+    max-width: 190px;
+    height: 135px;
   }
   
-  .carousel .card:hover {
-    height: 330px;
+  .carousel .glide__slide--active .card:hover {
+    height: 280px;
   }
   
   .carousel .card .img {
     width: 170px;
     height: 170px;
-    top: -60px;
-    left: 15px;
+    top: -70px;
   }
   
-  .carousel .card:hover .content {
-    visibility: visible;
-    opacity: 1;
-    margin-top: -60px;
-    transition-delay: 0.3s;
+  .carousel .glide__slide--active .card:hover .content {
+    margin-top: -80px;
+  }
+  
+  .carousel .glide__slide--active .card:hover .content::after {
+    right: 5px; 
+    bottom: 25px;
+  }
+  
+  .carousel .card .content .content-description {
+    line-height: 1.25em;
+    max-height: 6.25em;
+    font-size: .9em;
   }
 
   .carousel .card .content h2 {
-    font-size: 1em;
-    letter-spacing: .2em;
+    font-size: 1.25em;
   }
 
-  .carousel .card .content .content-description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.5em;
-    max-height: 10.5em;
-    word-wrap: break-word;
-    color: black;
-    text-align: justify;
-    font-size: 1em;
+  .contact {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+  }
+  
+  .link {
+    width: 30px;
+    height: 30px;
+    font-size: 12.5px;
+  }
+  
+  .link::before {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .top {
+    right: 5vw;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+  }
+  
+  .top a {
+    width: 30px;
+    height: 30px;
+    font-size: 12.5px;
+  }
+  
+  .top a::before {
+    height: 30px;
+    width: 30px;
   }
   
 }
 
-/* @media only screen and (min-width: 600px) {
-  .example {background: green;}
+@media only screen and (min-device-width: 400px) and (max-device-width: 600px) {
+  #title {
+    font-size: 1em;
+    letter-spacing: .2em;
+  }
+  
+  #start {
+    font-size: 1em;
+    letter-spacing: .1em;
+  }
+  
+  #name {
+    font-size: 2em;
+    letter-spacing: .2em;
+  }
+
+  #projectTitle {
+    font-size: 2em;
+    letter-spacing: .2em;
+  }
+  
+  .carousel .card {
+    max-width: 220px;
+    height: 155px;
+  }
+  
+  .carousel .glide__slide--active .card:hover {
+    height: 340px;
+  }
+  
+  .carousel .card .img {
+    width: 180px;
+    height: 180px;
+    top: -70px;
+  }
+  
+  .carousel .glide__slide--active .card:hover .content {
+    margin-top: -80px;
+  }
+  
+  .carousel .glide__slide--active .card:hover .content::after {
+    right: 6px; 
+    bottom: 28px;
+  }
+  
+  .carousel .card .content .content-description {
+    line-height: 1.5em;
+    max-height: 7.5em;
+  }
+
+  .contact {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+  }
+  
+  .link {
+    width: 30px;
+    height: 30px;
+    font-size: 12.5px;
+  }
+  
+  .link::before {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .top {
+    right: 5vw;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+  }
+  
+  .top a {
+    width: 30px;
+    height: 30px;
+    font-size: 12.5px;
+  }
+  
+  .top a::before {
+    height: 30px;
+    width: 30px;
+  }
+  
 }
 
-@media only screen and (min-width: 768px) {
-  .example {background: blue;}
+@media only screen and (min-device-width: 600px) and (max-device-width: 768px) {
+  #title {
+    font-size: 1em;
+    letter-spacing: .2em;
+  }
+  
+  #start {
+    font-size: 1em;
+    letter-spacing: .1em;
+  }
+  
+  #name {
+    font-size: 2em;
+    letter-spacing: .2em;
+  }
+
+  #projectTitle {
+    font-size: 2em;
+    letter-spacing: .2em;
+  }
+  
+  .carousel .card {
+    max-width: 230px;
+    height: 175px;
+  }
+  
+  .carousel .glide__slide--active .card:hover {
+    height: 360px;
+  }
+  
+  .carousel .card .img {
+    width: 200px;
+    height: 200px;
+  }
+  .carousel .glide__slide--active .card:hover .content {
+    margin-top: -80px;
+  }
+  
+  .carousel .glide__slide--active .card:hover .content::after {
+    right: 6px; 
+    bottom: 28px;
+  }
+  
+  .carousel .card .content .content-description {
+    line-height: 1.5em;
+    max-height: 7.5em;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 992px) {
+  .carousel .card {
+    max-width: 230px;
+    height: 175px;
+  }
+  
+  .carousel .glide__slide--active .card:hover {
+    height: 360px;
+  }
+  
+  .carousel .card .img {
+    width: 200px;
+    height: 200px;
+  }
+  .carousel .glide__slide--active .card:hover .content {
+    margin-top: -80px;
+  }
+  
+  .carousel .glide__slide--active .card:hover .content::after {
+    right: 6px; 
+    bottom: 28px;
+  }
+  
+  .carousel .card .content .content-description {
+    line-height: 1.5em;
+    max-height: 7.5em;
+  }
 } 
 
-@media only screen and (min-width: 992px) {
-  .example {background: orange;}
-}  */
+@media only screen and (min-device-width: 992px)and (max-device-width: 1200px) {
+  .carousel .card {
+    max-width: 260px;
+    height: 200px;
+  }
+  
+  .carousel .glide__slide--active .card:hover {
+    height: 360px;
+  }
+  
+  .carousel .card .img {
+    width: 230px;
+    height: 230px;
+  }
+  .carousel .glide__slide--active .card:hover .content {
+    margin-top: -80px;
+  }
+  
+  .carousel .glide__slide--active .card:hover .content::after {
+    right: 6px; 
+    bottom: 28px;
+  }
+  
+  .carousel .card .content .content-description {
+    line-height: 1.5em;
+    max-height: 6em;
+  }
+} 

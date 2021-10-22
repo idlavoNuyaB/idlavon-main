@@ -69,7 +69,7 @@ export default {
         1200: {
           perView: 2
         },
-        800: {
+        768: {
           perView: 1
         }
       }
