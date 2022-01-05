@@ -4,44 +4,56 @@
       <ul class="glide__slides">
         <li class="glide__slide">
           <div class="card">
-            <div class="img">
-              <img src="../assets/img/android.png">
-            </div>
-            <div class="content">
-              <h2>Title Project</h2>
-              <p class="content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+            <a href="https://github.com/Rakamin-Bootcamp-Kelompok-1/alodokter-rakamin-android-kelompok1" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+              <div class="img">
+                <img src="../assets/img/medikuy.png" alt="Error">
+              </div>
+              <div class="content">
+                <h2>Medikuy</h2>
+                <p class="content-description">Create MVVM monolith app to complete Android Developer bootcamp organized by Rakamin and Alodokter. 
+                  This app usage for read health article and make appointment with doctor</p>
+              </div>
+            </a>
           </div>
         </li>
         <li class="glide__slide">
           <div class="card">
-            <div class="img">
-              <img src="../assets/img/vue.png">
-            </div>
-            <div class="content">
-              <h2>Title Project 2</h2>
-              <p class="content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+            <a href="https://github.com/idlavoNuyaB/MovieDB" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+              <div class="img">
+                <img src="../assets/img/movie-db.png" alt="Error">
+              </div>
+              <div class="content">
+                <h2>MovieDB</h2>
+                <p class="content-description">Create MVVM modular app to graduate from Dicoding MADE 
+                  (Menjadi Android Developer Expert) class. This app usage for see reviewed movie or TV series and save favorite reviewed movie or TV series</p>
+              </div>
+            </a>
           </div>
         </li>
         <li class="glide__slide">
           <div class="card">
-            <div class="img">
-              <img src="../assets/img/react.png">
-            </div>
-            <div class="content">
-              <h2>Title Project 3</h2>
-              <p class="content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+            <a href="https://github.com/idlavoNuyaB/idlavon-main" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+              <div class="img">
+                <img src="../assets/img/main-website.png" alt="Error">
+              </div>
+              <div class="content">
+                <h2>Website Portofolio</h2>
+                <p class="content-description">Create this website using Vue.js and Glide.js</p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="glide__slide">
+          <div class="card">
+            <a style="text-decoration:none;">
+              <div class="img">
+                <img src="../assets/img/android.png" alt="Error">
+              </div>
+              <div class="content">
+                <h2>Andromaid</h2>
+                <p class="content-description">Coming Soon 2022</p>
+              </div>
+            </a>
           </div>
         </li>
       </ul>
@@ -60,10 +72,12 @@ export default {
   name: 'Carousel',
   mounted() {
     new Glide('.glide', {
+      startAt: 0, 
       type: 'carousel',
       perView: 3,
       focusAt: 'center',
       gap: 0,
+      hoverpause: true,
       autoplay: 3000,
       breakpoints: {
         1200: {
