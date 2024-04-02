@@ -45,13 +45,26 @@
         </li>
         <li class="glide__slide">
           <div class="card">
-            <a style="text-decoration:none;">
+            <a href="https://play.google.com/store/apps/details?id=iSellerCommerce.Android" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
               <div class="img">
-                <img src="../assets/img/android.png" alt="Error">
+                <img src="../assets/img/lakoo.png" alt="Error">
               </div>
               <div class="content">
-                <h2>Andromaid</h2>
-                <p class="content-description">Coming Soon 2022</p>
+                <h2>Lakoo</h2>
+                <p class="content-description">Develop & maintain this apps. This apps, which is used for selling goods offline and online, is usually used for micro, small and medium businesses </p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="glide__slide">
+          <div class="card">
+            <a href="" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+              <div class="img">
+                <img src="../assets/img/iresto.svg" alt="Error">
+              </div>
+              <div class="content">
+                <h2>iResto</h2>
+                <p class="content-description">Develop & maintain this apps. This apps, which is used for selling goods offline and online, is used for enterprise businesses. Coming soon this year</p>
               </div>
             </a>
           </div>

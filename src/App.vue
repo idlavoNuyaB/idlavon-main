@@ -4,9 +4,9 @@
 </template>
 
 <script>
-import Introduction from './components/Introduction.vue'
-import Main from './assets/js/index.js'
-import Showcase from './components/Showcase.vue'
+import Introduction from '@/components/Introduction.vue'
+import Main from '@/assets/js/index.js'
+import Showcase from '@/components/Showcase.vue'
 
 export default {
   name: 'App',

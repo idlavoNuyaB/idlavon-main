@@ -124,8 +124,8 @@ function generateTitle(firstTime) {
     let html = document.getElementById('title');
     html.innerText = '';
     var textTitles = [
-      "I'm programmer",
       "I'm android developer",
+      "I'm programmer",
       "I'm web developer"
     ];
     var randomTitles = Math.floor(Math.random() * textTitles.length);
