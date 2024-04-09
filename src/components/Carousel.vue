@@ -58,7 +58,7 @@
         </li>
         <li class="glide__slide">
           <div class="card">
-            <a href="" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+            <a style="text-decoration:none;">
               <div class="img">
                 <img src="../assets/img/iresto.svg" alt="Error">
               </div>
