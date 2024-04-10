@@ -38,7 +38,7 @@
               </div>
               <div class="content">
                 <h2>Website Portofolio</h2>
-                <p class="content-description">Create this website using Vue.js and Glide.js</p>
+                <p class="content-description">Create this website using Vue.js and Glide.js. Then revamp this website using Vite.js</p>
               </div>
             </a>
           </div>

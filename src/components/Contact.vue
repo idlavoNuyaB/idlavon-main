@@ -15,6 +15,11 @@
         <i class ="fas fa-envelope"></i>
       </a>
     </button>
+    <button class = "contact">
+      <a class="link" href ="https://wa.me/6282139052481" target="_blank" rel="noopener noreferrer">
+        <i class ="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+    </button>
     <button class ="top">
       <a @click="scrolling('.top','#wrapper')"><i class="fas fa-chevron-up"></i></a>
     </button>
