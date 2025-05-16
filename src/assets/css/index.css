@@ -74,8 +74,10 @@ h4 {
 
 #title {
 	color: white;
+  min-height: 1.2em;
 	font-size: 2em;
 	letter-spacing: .5em;
+  display: block;
 	animation: glitch-skew 2s infinite linear alternate-reverse;
 }
 
@@ -283,6 +285,50 @@ h4 {
   opacity: 1;
 }
 
+.change-theme {
+  position: absolute;
+  top: -8vh;
+  right: 5vw;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  border-color: transparent;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  transform: translateY(10vh);
+  opacity: 1;
+}
+
+.change-theme a {
+  display: inline-flex;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 0.75;
+  color: black;
+  background-color: transparent;
+}
+
+.change-theme a::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(45deg,#ecf0f1,#bdc3c7); 
+  border-radius: 50%;
+  z-index: -1;
+  transition: .3s ease-in;
+}
+
+.change-theme a:hover {
+  opacity: 1;
+}
+
+
 .top {
   position: absolute;
   right: 5vw;
@@ -344,6 +390,35 @@ h4 {
   opacity: 1;
 }
 
+.slide-up {
+  transform: translateY(-8vh);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+}
+
+.button-outline-start{
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.list-button-start {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;             
+}
+
+#button-start {
+	position:relative;
+	top: 2vh;
+	left: 0;
+	width: 100%;
+	color: white;
+	font-size: 2em;
+	letter-spacing: .1em;
+	animation: glitch-fade 4s infinite linear alternate-reverse;
+}
 
 @keyframes glitch-anim {
   0% {
@@ -532,7 +607,8 @@ h4 {
 }
 
 @media only screen and (max-width: 400px) {
-  #title {
+  #title,
+  #button-start {
     font-size: 1em;
     letter-spacing: .2em;
   }
@@ -620,12 +696,29 @@ h4 {
     height: 30px;
     width: 30px;
   }
+  .change-theme {
+    right: 5vw;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+  }
   
+  .change-theme a {
+    width: 30px;
+    height: 30px;
+    font-size: 12.5px;
+  }
+  
+  .change-theme a::before {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 @media only screen and (min-width: 400px) and (max-width: 600px) ,
   screen and (max-height: 700px)  {
-  #title {
+  #title,
+  #button-start {
     font-size: 1em;
     letter-spacing: .2em;
   }
@@ -708,15 +801,33 @@ h4 {
     width: 30px;
   }
   
+  .change-theme {
+    right: 5vw;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+  }
+  
+  .change-theme a {
+    width: 30px;
+    height: 30px;
+    font-size: 12.5px;
+  }
+  
+  .change-theme a::before {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
-  #title {
+  #title,
+  #button-start {
     font-size: 1em;
     letter-spacing: .2em;
   }
   
-  #start {
+  #start{
     font-size: 1em;
     letter-spacing: .1em;
   }

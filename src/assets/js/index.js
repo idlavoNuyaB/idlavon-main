@@ -1,9 +1,9 @@
 const Main = {
-  generate: function () {
+  generate: function (isV2) {
     generateName().then((firstTime) => {
       generateTitle(firstTime).then((argument) => {
         if(argument[1]){
-          checkBrowser();
+          checkBrowser(isV2);
           argument[1] = false;
           setTimeout( function() {
             deleteTitle(argument[0]);
@@ -83,7 +83,7 @@ function scrollTo(from,to) {
 
 function randomizeTitle(html,textTitle,type,resolve,firstTime) {
   setTimeout( function() {
-    var textRandom = '';  
+    var textRandom = '';
     var possible = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
     for( var i=0; i < textTitle.length+1; i++ ) {
       if(type == 1) {
@@ -145,16 +145,19 @@ function deleteTitle(textTitle) {
   },2000)
 }
 
-function checkBrowser() {
+function checkBrowser(isV2) {
   return new Promise((resolve) => {
+    var additional = "Scroll";
+    if (isV2)
+      additional = "Start"
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       var html = document.getElementById('start');
-      var text = "Tap to Scroll";
+      var text = "Tap to " + additional;
       var i = 0;
       typing(text,html,i,resolve);
     } else {
       var htmls = document.getElementById('start');
-      var texts = "Click to Scroll";
+      var texts = "Click to " + additional;
       var j = 0;
       typing(texts,htmls,j,resolve);
     }

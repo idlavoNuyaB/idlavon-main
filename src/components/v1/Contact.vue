@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import Main from './../assets/js/index.js'
+import Main from '../../assets/js/index.js'
 
 export default {
   name: "Contact",

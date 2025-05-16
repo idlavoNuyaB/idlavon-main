@@ -6,7 +6,7 @@
           <div class="card">
             <a href="https://github.com/Rakamin-Bootcamp-Kelompok-1/alodokter-rakamin-android-kelompok1" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
               <div class="img">
-                <img src="../assets/img/medikuy.png" alt="Error">
+                <img src="../../assets/img/medikuy.png" alt="Error">
               </div>
               <div class="content">
                 <h2>Medikuy</h2>
@@ -20,7 +20,7 @@
           <div class="card">
             <a href="https://github.com/idlavoNuyaB/MovieDB" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
               <div class="img">
-                <img src="../assets/img/movie-db.png" alt="Error">
+                <img src="../../assets/img/movie-db.png" alt="Error">
               </div>
               <div class="content">
                 <h2>MovieDB</h2>
@@ -34,7 +34,7 @@
           <div class="card">
             <a href="https://github.com/idlavoNuyaB/idlavon-main" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
               <div class="img">
-                <img src="../assets/img/main-website.png" alt="Error">
+                <img src="../../assets/img/main-website.png" alt="Error">
               </div>
               <div class="content">
                 <h2>Website Portofolio</h2>
@@ -47,7 +47,7 @@
           <div class="card">
             <a href="https://play.google.com/store/apps/details?id=iSellerCommerce.Android" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
               <div class="img">
-                <img src="../assets/img/lakoo.png" alt="Error">
+                <img src="../../assets/img/lakoo.png" alt="Error">
               </div>
               <div class="content">
                 <h2>Lakoo</h2>
@@ -60,7 +60,7 @@
           <div class="card">
             <a style="text-decoration:none;">
               <div class="img">
-                <img src="../assets/img/iresto.svg" alt="Error">
+                <img src="../../assets/img/iresto.svg" alt="Error">
               </div>
               <div class="content">
                 <h2>iResto</h2>
@@ -106,6 +106,6 @@ export default {
 </script>
 
 <style>
-@import '../../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
-@import '../../node_modules/@glidejs/glide/dist/css/glide.theme.min.css';
+@import '../../../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
+@import '../../../node_modules/@glidejs/glide/dist/css/glide.theme.min.css';
 </style>
