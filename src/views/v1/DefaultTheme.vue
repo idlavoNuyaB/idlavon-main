@@ -17,7 +17,6 @@
     mounted() {
       this.$nextTick(() => {
         Main.generate(false)
-        Main.scrolling('#wrapper','#wrapper2')
         Main.generateSecondPage()
       })
     }}
